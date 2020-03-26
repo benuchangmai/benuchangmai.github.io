@@ -1,0 +1,135 @@
+body {
+	background-color: #404040;
+	background-image: url("images/bg/8.jpg");
+	color: white;
+	height: 100%;
+	margin: 0;
+}
+.header > .title {
+	padding-left: 10px;
+}
+.nav-wrapper {
+	display: flex;
+	padding: 2px;
+}
+.nav-wrapper > div {
+	padding: 10px;
+}
+.nav-wrapper > div:hover {
+	background: rgba(128,128,128,0.3);
+}
+.nav-wrapper > div > a {
+	text-decoration: none;
+}
+.nav-wrapper > div > a:hover {
+	color: white;
+}
+
+.main-body {
+	position: absolute;
+	top: 110px;
+	bottom: 30px;
+	background: rgba(128,128,128,0.2); 
+	color: white;
+	bottom: 0;
+}
+.profile-bio {
+	padding: 10px;
+	width: 100%;
+}
+.profile-pic {
+	max-width: 500px;
+	padding: 10px;
+	opacity: 1;
+}
+
+.profile-pic > img {
+	max-width: 100%;
+}
+.images-grid {
+	background: rgba(128,128,128,0.2);  
+	color: white;
+	display: grid;
+	grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+	position: absolute;
+	top: 110px;
+	bottom: 0;
+	overflow: scroll;
+	padding-top: 40px;
+}
+.images-grid > div {
+	padding: 30px;
+	padding-top: 15px;
+	display: block;
+	margin: auto;
+}
+
+.images-grid > div > img {
+	max-width: 90%;	
+	transition:  all 1s ease;
+	animation-delay: 0s;
+}
+.images-grid > div > img:hover {
+	transform: scale(1.3);	
+}
+
+.images-title {
+	padding-left: 30px;
+}
+.videos-grid {
+	background: rgba(128,128,128,0.2);  
+	color: white;	
+	display: grid;
+	grid-template-columns:  1fr 1fr 1fr;
+	position: absolute;
+	top: 110px;
+	width: 100%;
+	bottom: 0;
+	overflow: scroll;
+}
+.videos-grid > div {
+	display: table-cell;
+	padding: 30px;
+	padding-top: 15px;
+	display: block;
+	margin: auto;
+}
+.videos-grid > div {
+
+}
+.videos-grid > div > video{
+	max-width: 100%;
+}
+.projects-grid {
+	background: rgba(128,128,128,0.2);  
+	color: white;	
+	position: absolute;
+	top: 110px;
+	bottom: 30px;
+	width: 100%;
+	height: 100%;
+	overflow: scroll;
+}
+.projects-grid > .project {
+	display: flex;
+	height: 200px;
+	padding: 10px;
+}
+.projects-grid > .project > .project-img{
+	max-width: 200px;
+	display: block;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.projects-grid > .project > .project-title{
+	padding-left: 20px;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+.projects-grid > .project > .project-img > a >img{
+	max-width: 100%;
+}
+footer {
+	position: absolute;
+	bottom: 0;
+}
