@@ -50,22 +50,26 @@ body {
 	background: rgba(128,128,128,0.2);  
 	color: white;
 	display: grid;
-	grid-template-columns:  1fr 1fr 1fr 1fr 1fr;
+	grid-template-columns:  repeat(auto-fill, minmax(200px, auto));
+	grid-gap: 1rem;
 	position: absolute;
 	top: 110px;
 	bottom: 0;
 	overflow: scroll;
 	padding-top: 40px;
 }
+.portrait {
+	grid-row: span 2;
+}
+.landscape {
+
+}
 .images-grid > div {
-	padding: 30px;
-	padding-top: 15px;
-	display: block;
 	margin: auto;
 }
 
-.images-grid > div > img {
-	max-width: 90%;	
+.images-grid > div > img {	
+	max-width: 100%;
 	transition:  all 1s ease;
 	animation-delay: 0s;
 }
