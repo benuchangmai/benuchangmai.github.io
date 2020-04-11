@@ -12,17 +12,20 @@ body {
 	display: flex;
 	padding: 2px;
 }
-.nav-wrapper > div {
+.nav-wrapper > li {
 	padding: 10px;
 }
-.nav-wrapper > div:hover {
-	background: rgba(128,128,128,0.3);
+.nav-wrapper > li:hover {
+	background-color: rgba(128,128,128,0.3);
 }
-.nav-wrapper > div > a {
+.nav-wrapper > li > a {
 	text-decoration: none;
 }
-.nav-wrapper > div > a:hover {
+.nav-wrapper > li > a:hover {
 	color: white;
+}
+.nav-wrapper > .active-tab {
+	background-color: rgba(128,128,128,0.2);
 }
 
 .main-body {

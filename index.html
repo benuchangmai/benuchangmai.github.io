@@ -3,26 +3,21 @@
 <head>
 	<title>Welcome</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="min-js.js"></script>
 </head>
 <body>
 	<div class="header">
 		<div class="title">
 			<h2>Welcome to my website</h2>
 		</div>		
-		<div class="nav-wrapper">
-			<div class="home" style="background: rgba(128, 128, 128, 0.2); ">
-				<a href="index.html" style="color: white;">Home</a>
-			</div>
-			<div class="images" >
-				<a href="images-page.html" style="color: white;">Images</a>
-			</div>
-			<div class="videos" >
-				<a href="videos-page.html" style="color: white;">Videos</a>
-			</div>
-			<div class="articles" >
-				<a href="projects-page.html" style="color: white;">Projects</a>
-			</div>
+		<div id="nav-bar">
 		</div>
+		<script type="text/javascript" >
+			$(document).ready(function(){
+			  $("#nav-bar").load("nav-bar.html");
+			});
+		</script>
+
 		
 	</div>
 	<div class="main-body" style="display: flex;">
@@ -43,6 +38,16 @@
 <footer>
     	<small>&copy; Copyright 2020, Benu Changmai</small>
 </footer>
+
+		<script type="text/javascript">
+
+			$('.nav-wrapper').on('click','li',function(){
+				$('.nav-wrapper li.active-tab').removeClass('active-tab');
+				$(this).addClass('active-tab');
+			});
+			
+		</script>
+
 </body>
 
 </html>

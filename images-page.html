@@ -3,27 +3,20 @@
 <head>
 	<title>Images Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
+	<script src="min-js.js"></script>
 </head>
 <body>
 	<div class="header">
 		<div class="title">
 			<h2>Images</h2>
 		</div>		
-		<div class="nav-wrapper">
-			<div class="home">
-				<a href="index.html" style="color: white;">Home</a>
-			</div>
-			<div class="images" style="background: rgba(128, 128, 128, 0.2); ">
-				<a href="images-page.html" style="color: white;">Images</a>
-			</div>
-			<div class="videos">
-				<a href="videos-page.html" style="color: white;">Videos</a>
-			</div>
-			<div class="articles">
-				<a href="projects-page.html" style="color: white;">Projects</a>
-			</div>
+		<div id="nav-bar">
 		</div>
-		
+		<script type="text/javascript" >
+			$(function(){
+			  $("#nav-bar").load("nav-bar.html");
+			});
+		</script>
 	</div>
 
 	<div class="images-grid" >
@@ -67,7 +60,14 @@
 		<div class="landscape"><img src="images/travel/19.jpg"></div>
 
 	</div>
-	
+		<script type="text/javascript">
+
+			$('.nav-wrapper').on('click','li',function(){
+				$('.nav-wrapper li.active-tab').removeClass('active-tab');
+				$(this).addClass('active-tab');
+			});
+			
+		</script>
 </body>
 <footer>
 	<small>&copy; Copyright 2020, Benu Changmai</small>
