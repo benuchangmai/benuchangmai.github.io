@@ -3,7 +3,8 @@
 <head>
 	<title>Welcome</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script src="min-js.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script type="text/javascript" src="script.js"></script>
 </head>
 <body>
 	<div class="header">
@@ -13,11 +14,12 @@
 		<div id="nav-bar">
 		</div>
 		<script type="text/javascript" >
-			$(document).ready(function(){
+			$(function(){
 			  $("#nav-bar").load("nav-bar.html");
 			});
+			
+			
 		</script>
-
 		
 	</div>
 	<div class="main-body" style="display: flex;">
@@ -38,16 +40,14 @@
 <footer>
     	<small>&copy; Copyright 2020, Benu Changmai</small>
 </footer>
-
-		<script type="text/javascript">
-
-			$('.nav-wrapper').on('click','li',function(){
-				$('.nav-wrapper li.active-tab').removeClass('active-tab');
-				$(this).addClass('active-tab');
-			});
-			
-		</script>
-
+	<script type="text/javascript">
+		window.addEventListener("load",function(){
+			var nav_bar = document.querySelector("#nav-bar");
+			var active_tab = nav_bar.getElementsByTagName('div')[1];
+			active_tab.style.background = "rgba(128, 128, 128, 0.2)";
+		});
+		
+	</script>
 </body>
 
 </html>

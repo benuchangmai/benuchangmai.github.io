@@ -8,24 +8,21 @@ body {
 .header > .title {
 	padding-left: 10px;
 }
-.nav-wrapper {
+#nav-wrapper {
 	display: flex;
 	padding: 2px;
 }
-.nav-wrapper > li {
+.tab {
 	padding: 10px;
 }
-.nav-wrapper > li:hover {
-	background-color: rgba(128,128,128,0.3);
+.tab:hover {
+	background: rgba(128,128,128,0.3);
 }
-.nav-wrapper > li > a {
+.tab > a {
 	text-decoration: none;
 }
-.nav-wrapper > li > a:hover {
+.tab > a:hover {
 	color: white;
-}
-.nav-wrapper > .active-tab {
-	background-color: rgba(128,128,128,0.2);
 }
 
 .main-body {
