@@ -6,7 +6,7 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	<script type="text/javascript" src="script.js"></script>
 </head>
-<body>
+<body onload="activeTab('.home')">
 	<div class="header">
 		<div class="title">
 			<h2>Welcome to my website</h2>
@@ -40,14 +40,6 @@
 <footer>
     	<small>&copy; Copyright 2020, Benu Changmai</small>
 </footer>
-	<script type="text/javascript">
-		window.addEventListener("load",function(){
-			var nav_bar = document.querySelector("#nav-bar");
-			var active_tab = nav_bar.getElementsByTagName('div')[1];
-			active_tab.style.background = "rgba(128, 128, 128, 0.2)";
-		});
-		
-	</script>
 </body>
 
 </html>

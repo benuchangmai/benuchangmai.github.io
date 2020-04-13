@@ -2,11 +2,14 @@ body {
 	background-color: #404040;
 	background-image: url("images/bg/8.jpg");
 	color: white;
-	height: 100%;
 	margin: 0;
+	overflow: scroll;
 }
 .header > .title {
 	padding-left: 10px;
+}
+#nav-bar {
+	position: sticky;
 }
 #nav-wrapper {
 	display: flex;
@@ -52,10 +55,8 @@ body {
 	display: grid;
 	grid-template-columns:  repeat(auto-fill, minmax(200px, auto));
 	grid-gap: 1rem;
-	position: absolute;
-	top: 110px;
+	position: relative;
 	bottom: 0;
-	overflow: scroll;
 	padding-top: 40px;
 }
 .portrait {
@@ -71,10 +72,7 @@ body {
 .images-grid > div > img {	
 	max-width: 100%;
 	transition:  all 1s ease;
-	animation-delay: 0s;
-}
-.images-grid > div > img:hover {
-	transform: scale(1.3);	
+	cursor: pointer;
 }
 
 .images-title {
@@ -85,11 +83,10 @@ body {
 	color: white;	
 	display: grid;
 	grid-template-columns:  1fr 1fr 1fr;
-	position: absolute;
-	top: 110px;
+	position: relative;
 	width: 100%;
 	bottom: 0;
-	overflow: scroll;
+
 }
 .videos-grid > div {
 	display: table-cell;
@@ -107,12 +104,10 @@ body {
 .projects-grid {
 	background: rgba(128,128,128,0.2);  
 	color: white;	
-	position: absolute;
-	top: 110px;
-	bottom: 30px;
+	position: relative;
+	bottom: 0;
 	width: 100%;
-	height: 100%;
-	overflow: scroll;
+	
 }
 .projects-grid > .project {
 	display: flex;
@@ -133,7 +128,41 @@ body {
 .projects-grid > .project > .project-img > a >img{
 	max-width: 100%;
 }
+
 footer {
 	position: absolute;
+	width: 100%;
 	bottom: 0;
+}
+#btt {
+	position: fixed;
+	right: 5vw;
+	bottom: 20vh;
+	padding: 10px;
+	opacity: 0;
+}
+#btt.visible {
+	opacity: 1;
+}
+#lightbox {
+	position: fixed;
+	z-index: 1000;
+	top: 0;
+	margin: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.8);
+	display: none;
+}
+#lightbox.active {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+#lightbox img {
+	max-width: 60vw;
+	max-height: 90vh;
+	padding: 5px;
+	background-color: black;
+	border: 2px solid white;
 }

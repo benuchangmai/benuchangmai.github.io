@@ -4,8 +4,9 @@
 	<title>Images Page</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script defer src="script.js"></script>
 </head>
-<body>
+<body onload="activeTab('.images')">
 	<div class="header">
 		<div class="title">
 			<h2>Images</h2>
@@ -60,15 +61,35 @@
 		<div class="landscape"><img src="images/travel/19.jpg"></div>
 
 	</div>
+	<footer>
+		<button id="btt">Back to top</button>
+		<small>&copy; Copyright 2020, Benu Changmai</small>
+	</footer>
 	<script type="text/javascript">
-		window.addEventListener("load",function(){
-			var nav_bar = document.querySelector("#nav-bar");
-			var active_tab = nav_bar.getElementsByTagName('div')[2];
-			active_tab.style.background = "rgba(128, 128, 128, 0.2)";
-		});	
+			const lightbox = document.createElement('div');
+			lightbox.id = "lightbox";
+			document.body.appendChild(lightbox);
+
+			const images = document.querySelectorAll("img");
+			images.forEach(image =>{
+				image.addEventListener("click", e=>{
+					lightbox.className = "active";
+					const img = document.createElement('img');
+					img.src = image.src;
+					while(lightbox.firstChild){
+						lightbox.removeChild(lightbox.firstChild);
+					}
+					lightbox.appendChild(img);
+				});
+			})
+			lightbox.addEventListener("click", e=>{
+				console.log(e.target);
+				console.log(e.currentTarget);
+				if(e.target != e.currentTarget)
+					return;
+				lightbox.classList.remove("active");
+			})	
 	</script>
 </body>
-<footer>
-	<small>&copy; Copyright 2020, Benu Changmai</small>
-</footer>
+
 </html>
